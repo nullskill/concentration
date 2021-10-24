@@ -34,7 +34,7 @@ class ConcentrationGame {
     func chooseCard(at index: Int) {
         if !cards[index].isMatched {
             if let matchingIndex = indexOfOneAndOnlyFaceUpCard, matchingIndex != index {
-                if cards[matchingIndex].identifier == cards[index].identifier {
+                if cards[matchingIndex] == cards[index] {
                     cards[matchingIndex].isMatched = true
                     cards[index].isMatched = true
                 }
